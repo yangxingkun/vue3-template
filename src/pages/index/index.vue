@@ -2,6 +2,7 @@
   <div>
     <img alt="Vue logo" src="../../assets/logo.png" />
     <p class="links">
+      <router-link to="/socket">Socket</router-link>
       <router-link to="/home">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link :to="`/dynamic/${id}`">Dynamic</router-link>
@@ -13,12 +14,12 @@
         <component :is="Component" />
       </transition>
     </router-view>
-    <h2>Vuex</h2>
+    <!-- <h2>Vuex</h2>
     <h3>{{ isEven ? 'Even' : 'Odd' }}</h3>
     <div>
       <button @click="add">Sync Add</button>
       <button @click="asyncAdd">Async Add</button>
-    </div>
+    </div> -->
   </div>
 </template>
 <script setup>

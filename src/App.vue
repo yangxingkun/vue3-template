@@ -5,11 +5,24 @@
 </template>
 
 <script>
-import { defineComponent, computed } from 'vue'
-
+import { defineComponent, computed, onMounted } from "vue";
+import { useStore } from "vuex";
 export default defineComponent({
-  name: 'App',
-})
+  name: "App",
+  mounted() {
+    const store = useStore();
+    console.log("[ store ]", store);
+    store.dispatch("m2/socketInit");
+  },
+  // setup() {
+  //   onMounted(() => {
+  //     console.log('[ store ]',store )
+  //     store.dispatch('m2/socketInit')
+  //   })
+  //   return{
+  //   }
+  // }
+});
 </script>
 
 <style>
